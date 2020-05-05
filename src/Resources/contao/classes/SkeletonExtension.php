@@ -10,7 +10,9 @@
 
 namespace ContaoEstateManager\SkeletonExtension;
 
-class SkeletonExtension extends \System
+use Contao\System;
+
+class SkeletonExtension extends System
 {
 
 }

@@ -10,6 +10,8 @@
 
 namespace ContaoEstateManager\SkeletonExtension;
 
+use Contao\Config;
+use Contao\Environment;
 use ContaoEstateManager\EstateManager;
 
 class AddonManager
@@ -53,14 +55,14 @@ class AddonManager
 
     public static function valid()
     {
-        if(\Environment::get('requestUri') === '/contao/install')
+        if(strpos(Environment::get('requestUri'), '/contao/install') !== false)
         {
             return true;
         }
 
         if (static::$initialized === false)
         {
-            static::$valid = EstateManager::checkLicenses(\Config::get(static::$key), static::$licenses, static::$key);
+            static::$valid = EstateManager::checkLicenses(Config::get(static::$key), static::$licenses, static::$key);
             static::$initialized = true;
         }
 

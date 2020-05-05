@@ -2,7 +2,7 @@
   "name":"contao-estatemanager/skeleton-extension",
   "type":"contao-bundle",
   "description":"Skeleton-Extension Extension for Contao EstateManager",
-  "keywords":["contao","estatemanager","real estate","estate","property"],
+  "keywords":["contao","estatemanager"],
   "homepage":"https://www.contao-estatemanager.com/",
   "license":"proprietary",
   "authors":[
