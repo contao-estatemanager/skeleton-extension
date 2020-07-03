@@ -17,10 +17,16 @@ use ContaoEstateManager\EstateManager;
 class AddonManager
 {
     /**
-     * Addon name
+     * Bundle name
      * @var string
      */
-    public static $name = 'Skeleton Extension';
+    public static $bundle = 'EstateManagerSkeletonExtension';
+
+    /**
+     * Package
+     * @var string
+     */
+    public static $package = 'contao-estatemanager/skeleton-extension';
 
     /**
      * Addon config key
