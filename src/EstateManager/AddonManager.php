@@ -1,12 +1,4 @@
 <?php
-/**
- * This file is part of Contao EstateManager.
- *
- * @link      https://www.contao-estatemanager.com/
- * @source    https://github.com/contao-estatemanager/skeleton-bundle
- * @copyright Copyright (c) 2019  Oveleon GbR (https://www.oveleon.de)
- * @license   https://www.contao-estatemanager.com/lizenzbedingungen.html
- */
 
 namespace ContaoEstateManager\SkeletonExtension;
 
@@ -61,12 +53,12 @@ class AddonManager
 
     public static function valid()
     {
-        if(strpos(Environment::get('requestUri'), '/contao/install') !== false)
+        if (false !== strpos(Environment::get('requestUri'), '/contao/install'))
         {
             return true;
         }
 
-        if (static::$initialized === false)
+        if (false === static::$initialized)
         {
             static::$valid = EstateManager::checkLicenses(Config::get(static::$key), static::$licenses, static::$key);
             static::$initialized = true;
@@ -74,5 +66,4 @@ class AddonManager
 
         return static::$valid;
     }
-
 }

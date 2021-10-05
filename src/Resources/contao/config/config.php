@@ -1,17 +1,12 @@
 <?php
-/**
- * This file is part of Contao EstateManager.
- *
- * @link      https://www.contao-estatemanager.com/
- * @source    https://github.com/contao-estatemanager/skeleton-bundle
- * @copyright Copyright (c) 2019  Oveleon GbR (https://www.oveleon.de)
- * @license   https://www.contao-estatemanager.com/lizenzbedingungen.html
- */
 
+use ContaoEstateManager\SkeletonExtension\EstateManager\AddonManager;
 
-// ESTATEMANAGER
-$GLOBALS['TL_ESTATEMANAGER_ADDONS'][] = array('ContaoEstateManager\\SkeletonExtension', 'AddonManager');
+// Register addon
+$GLOBALS['TL_ESTATEMANAGER_ADDONS'][] = ['ContaoEstateManager\SkeletonExtension', 'AddonManager'];
 
-if(ContaoEstateManager\SkeletonExtension\AddonManager::valid()) {
-
+// Remove the IF-statement if no license is required. In addition, the AddonManager class can also be removed.
+if(AddonManager::valid())
+{
+    // Add backend modules and other stuff
 }
